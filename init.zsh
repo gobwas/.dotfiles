@@ -1,5 +1,5 @@
-modules={git,go}
-echo "MODULES $modules"
-for file in ~/.dotfiles/modules/${modules}/{init,exports,aliases,functions,extra}.zsh; do
+include_modules=git,go
+
+for file in $(/bin/zsh -c "echo ~/.dotfiles/modules/{aaa,bbb}/{${include_modules}}/{init,exports,aliases,functions,extra}.zsh"); do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;

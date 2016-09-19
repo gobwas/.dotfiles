@@ -24,4 +24,6 @@ if has("autocmd")
 endif
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
+set backspace=indent,eol,start
+
 colorscheme one

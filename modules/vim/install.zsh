@@ -18,6 +18,12 @@ if [ ! -d ~/.vim/bundle/vim-go ]; then
 	git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 fi
 
+# Install vim-lastplace
+# See https://github.com/dietsche/vim-lastplace
+if [ ! -d ~/.vim/bundle/vim-lastplace ]; then
+	git clone git://github.com/dietsche/vim-lastplace.git ~/.vim/bundle/vim-lastplace
+fi
+
 # Install color themes.
 # See http://vimcolors.com
 # See https://github.com/rakr/vim-one

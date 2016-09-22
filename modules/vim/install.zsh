@@ -24,6 +24,12 @@ if [ ! -d ~/.vim/bundle/vim-lastplace ]; then
 	git clone git://github.com/dietsche/vim-lastplace.git ~/.vim/bundle/vim-lastplace
 fi
 
+# Install NERDTree
+# See https://github.com/scrooloose/nerdtree
+if [ ! -d ~/.vim/bundle/nerdtree ]; then
+	git clone https://github.com/scrooloose/nerdtree.git
+fi
+
 # Install color themes.
 # See http://vimcolors.com
 # See https://github.com/rakr/vim-one

@@ -2,7 +2,7 @@ source "$(dirname $0)/../../utils/func.sh"
 
 # Install fresh vim;
 if has brew; then
-	brew install vim;
+	brew install vim --with-lua;
 fi
 
 # Create vim directories.
@@ -27,7 +27,13 @@ fi
 # Install NERDTree
 # See https://github.com/scrooloose/nerdtree
 if [ ! -d ~/.vim/bundle/nerdtree ]; then
-	git clone https://github.com/scrooloose/nerdtree.git
+	git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+fi
+
+# Install Neocomplete
+# See https://github.com/Shougo/neocomplete.vim
+if [ ! -d ~/.vim/bundle/neocomplete ]; then
+	git clone https://github.com/Shougo/neocomplete.vim ~/.vim/bundle/neocomplete
 fi
 
 # Install color themes.
@@ -38,6 +44,6 @@ curl -LSso ~/.vim/colors/lucid.vim https://raw.githubusercontent.com/cseelus/vim
 curl -LSso ~/.vim/colors/one.vim   https://raw.githubusercontent.com/rakr/vim-one/master/colors/one.vim
 
 # Copy .vimrc if it not exists.
-if [ ! -f ~/.vimrc ]; then
-	cp vim.rc "$HOME/.vimrc"
+if [ ! -f ~/.vimrc ] || [ "$DOT_FORCE" -eq "1" ]; then
+	cp "$(dirname $0)/vim.rc" "$HOME/.vimrc"
 fi

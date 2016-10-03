@@ -46,7 +46,11 @@ fi
 if [ ! -d ~/.vim/bundle/tagbar ]; then
 	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 fi
-
+# Install vim-misc (it is a dependency for easytags);
+# See https://github.com/xolox/vim-misc
+if [ ! -d ~/.vim/bundle/misc ]; then
+	git clone https://github.com/xolox/vim-misc ~/.vim/bundle/misc
+fi
 # Install easytags
 # See https://github.com/xolox/vim-easytags
 if [ ! -d ~/.vim/bundle/easytags ]; then

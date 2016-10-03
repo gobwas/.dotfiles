@@ -1,4 +1,4 @@
 # Copy .vimrc if it not exists.
 if [ ! -f ~/.screenrc ]; then
-	cp screen.rc "$HOME/.screenrc"
+	cp "$(dirname $0)/screen.rc" "$HOME/.screenrc"
 fi

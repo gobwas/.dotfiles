@@ -59,7 +59,7 @@ fi
 # Now run install scripts from modules.
 # ------------------------------------
 
-include_modules=go,git,brew,python,vim
+include_modules=go,git,brew,python,vim,tmux
 
 for file in $(/bin/zsh -c "echo ~/.dotfiles/modules/{${include_modules}}/install.zsh"); do
 	if [ -r "$file" ] && [ -f "$file" ]; then

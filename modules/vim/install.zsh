@@ -32,8 +32,14 @@ fi
 
 # Install Neocomplete
 # See https://github.com/Shougo/neocomplete.vim
+#if [ ! -d ~/.vim/bundle/neocomplete ]; then
+#	git clone https://github.com/Shougo/neocomplete.vim ~/.vim/bundle/neocomplete
+#fi
+
+# Install tagbar
+# See https://github.com/majutsushi/tagbar
 if [ ! -d ~/.vim/bundle/neocomplete ]; then
-	git clone https://github.com/Shougo/neocomplete.vim ~/.vim/bundle/neocomplete
+	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 fi
 
 # Install color themes.

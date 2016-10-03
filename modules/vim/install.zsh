@@ -38,6 +38,11 @@ fi
 
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
+if has yum; then
+	yum install ctags-etags;
+elif has brew; then
+	brew install ctags;
+fi
 if [ ! -d ~/.vim/bundle/tagbar ]; then
 	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 fi

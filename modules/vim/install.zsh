@@ -47,6 +47,12 @@ if [ ! -d ~/.vim/bundle/tagbar ]; then
 	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 fi
 
+# Install easytags
+# See https://github.com/xolox/vim-easytags
+if [ ! -d ~/.vim/bundle/easytags ]; then
+	git clone https://github.com/xolox/vim-easytags ~/.vim/bundle/easytags
+fi
+
 # Install color themes.
 # See http://vimcolors.com
 # See https://github.com/rakr/vim-one

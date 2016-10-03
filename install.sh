@@ -4,7 +4,9 @@ source utils/func.sh;
 pm=
 if has brew; then
 	pm="brew"
-else 
+elif has yum; then
+	pm="yum"
+else
 	echo "no package manager =("
 	exit 1
 fi

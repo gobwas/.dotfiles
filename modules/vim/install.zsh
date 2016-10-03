@@ -38,7 +38,7 @@ fi
 
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
-if [ ! -d ~/.vim/bundle/neocomplete ]; then
+if [ ! -d ~/.vim/bundle/tagbar ]; then
 	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 fi
 

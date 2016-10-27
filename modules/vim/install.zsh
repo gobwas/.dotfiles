@@ -6,7 +6,7 @@ if has brew; then
 fi
 
 # Create vim directories.
-mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors
+mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors ~/.vim/_{swap,backup,undo}
 
 # Install pathogen.
 # See https://github.com/tpope/vim-pathogen

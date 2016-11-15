@@ -7,3 +7,12 @@ has() {
 		return 1
 	fi
 }
+
+project() {
+	for dir in "$HOME/Development"; do
+		if [ -d "$dir/$1" ]; then
+			echo "$dir/$1";
+			return;
+		fi
+	done
+}

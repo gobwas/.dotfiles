@@ -8,11 +8,36 @@ has() {
 	fi
 }
 
+directories() {
+	dirs="$HOME/Development"
+	if [ -d $GOPATH ]; then
+		dirs=$(echo "$dirs\n$(ls -d $GOPATH/src/*)")
+	fi
+	echo $dirs
+}
+
 project() {
-	for dir in "$HOME/Development"; do
-		if [ -d "$dir/$1" ]; then
-			echo "$dir/$1";
-			return;
-		fi
+	opts=""
+	count=0
+	for dir in $(directories); do
+		for sub in $(find $dir -name "*$1*" -type d -maxdepth 3); do
+			((count++))
+			if [ -z $opts ]; then
+				opts=$sub
+			else
+				opts=$(echo "$opts $sub")
+			fi
+		done
+	done
+	if [ $count -le 1 ]; then
+		echo "$opts"
+		return
+	fi	
+	arr=(`echo ${opts}`);
+	select resp in $arr; do
+		case $resp in
+			* ) echo "$resp"; return;;
+			q ) return;;
+		esac
 	done
 }

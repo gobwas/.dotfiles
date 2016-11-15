@@ -32,9 +32,9 @@ fi
 
 # Install Neocomplete
 # See https://github.com/Shougo/neocomplete.vim
-#if [ ! -d ~/.vim/bundle/neocomplete ]; then
-#	git clone https://github.com/Shougo/neocomplete.vim ~/.vim/bundle/neocomplete
-#fi
+if [ ! -d ~/.vim/bundle/neocomplete ]; then
+	git clone https://github.com/Shougo/neocomplete.vim ~/.vim/bundle/neocomplete
+fi
 
 # Install tagbar
 # See https://github.com/majutsushi/tagbar

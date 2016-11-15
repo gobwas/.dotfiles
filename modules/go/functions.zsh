@@ -1,5 +1,5 @@
-devgo() {
-	if [[ "$1" != "" ]]; then
+godev() {
+	if [[ ! -z "$1" ]]; then
 		p=$GOPATH/src/$GOREPO/$1
 		if [[ -d $p ]]; then
 			cd $p

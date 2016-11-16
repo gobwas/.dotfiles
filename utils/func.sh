@@ -20,7 +20,7 @@ project() {
 	opts=""
 	count=0
 	for dir in $(directories); do
-		for sub in $(find $dir -name "*$1*" -type d -maxdepth 3); do
+		for sub in $(find $dir -maxdepth 3 -name "*$1*" -type d); do
 			((count++))
 			if [ -z $opts ]; then
 				opts=$sub

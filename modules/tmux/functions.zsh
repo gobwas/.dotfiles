@@ -9,10 +9,12 @@ ide() {
 			return 1
 		fi
 	fi
-	
-	tmux new-session -d -n $(basename $wd) -s 'dev' -c $wd 'vim'
+
+    id=$RANDOM
+
+	tmux new-session -d -n $(basename $wd) -s "dev-${id}" -c $wd 'vim'
 	tmux setw -g mode-mouse on
 	tmux split-window -v -p 25 -c $wd
 	tmux select-pane -l
-	tmux -2 attach-session -d -t 'dev' 
+	tmux -2 attach-session -d -t "dev-${id}"
 }

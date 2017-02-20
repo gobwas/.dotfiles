@@ -30,12 +30,6 @@ if [ ! -d ~/.vim/bundle/nerdtree ]; then
 	git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 fi
 
-# Install Neocomplete
-# See https://github.com/Shougo/neocomplete.vim
-# if [ ! -d ~/.vim/bundle/neocomplete ]; then
-# 	git clone https://github.com/Shougo/neocomplete.vim ~/.vim/bundle/neocomplete
-# fi
-
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
 if has yum; then
@@ -45,16 +39,6 @@ elif has brew; then
 fi
 if [ ! -d ~/.vim/bundle/tagbar ]; then
 	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
-fi
-# Install vim-misc (it is a dependency for easytags);
-# See https://github.com/xolox/vim-misc
-if [ ! -d ~/.vim/bundle/misc ]; then
-	git clone https://github.com/xolox/vim-misc ~/.vim/bundle/misc
-fi
-# Install easytags
-# See https://github.com/xolox/vim-easytags
-if [ ! -d ~/.vim/bundle/easytags ]; then
-	git clone https://github.com/xolox/vim-easytags ~/.vim/bundle/easytags
 fi
 
 # Install color themes.

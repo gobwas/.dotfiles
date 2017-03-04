@@ -6,6 +6,8 @@ if has brew; then
 	pm="brew"
 elif has yum; then
 	pm="yum"
+elif has apt-get; then
+	pm="apt-get"
 else
 	echo "no package manager =("
 	exit 1

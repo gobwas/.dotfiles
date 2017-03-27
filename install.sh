@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 source utils/func.sh;
 
 # Detect package manager.

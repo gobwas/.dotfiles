@@ -30,6 +30,11 @@ if [ ! -d ~/.vim/bundle/nerdtree ]; then
 	git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 fi
 
+# Install syntastic
+if [ ! -d ~/.vim/bundle/syntastic ]; then
+	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
+fi
+
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
 if has yum; then

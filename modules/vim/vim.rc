@@ -60,6 +60,7 @@ set undodir=~/.vim/_undo/
 " Run pathogen.
 execute pathogen#infect()
 
+set background=light
 colorscheme one
 
 

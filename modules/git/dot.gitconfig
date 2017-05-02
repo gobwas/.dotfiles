@@ -1,0 +1,11 @@
+[user]
+	name = Sergey Kamardin
+	email = gobwas@gmail.com
+[diff]
+	tool = vimdiff+
+[difftool]
+	prompt = false
+[difftool "vimdiff+"]
+	cmd = vimdiff -c 'set background=dark' $LOCAL $REMOTE
+[alias]
+	d = difftool

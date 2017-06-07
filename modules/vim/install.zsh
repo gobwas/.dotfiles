@@ -35,6 +35,12 @@ if [ ! -d ~/.vim/bundle/syntastic ]; then
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
 fi
 
+# Install vim-gitgutter
+# See github.com/airblade/vim-gitgutter
+if [ ! -d ~/.vim/bundle/vim-gitgutter ]; then
+	git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
+fi
+
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
 if has yum; then

@@ -41,6 +41,12 @@ if [ ! -d ~/.vim/bundle/vim-gitgutter ]; then
 	git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 fi
 
+# Install vim-multiple-cursors
+# See github.com/terryma/vim-multiple-cursors
+if [ ! -d ~/.vim/bundle/vim-multiple-cursors ]; then
+	git clone https://github.com/terryma/vim-multiple-cursors ~/.vim/bundle/vim-multiple-cursors
+fi
+
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
 if has yum; then

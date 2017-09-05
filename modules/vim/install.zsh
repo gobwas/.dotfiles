@@ -62,8 +62,13 @@ fi
 # See http://vimcolors.com
 # See https://github.com/rakr/vim-one
 # See https://github.com/cseelus/vim-colors-lucid
-curl -LSso ~/.vim/colors/lucid.vim https://raw.githubusercontent.com/cseelus/vim-colors-lucid/master/colors/lucid.vim
-curl -LSso ~/.vim/colors/one.vim   https://raw.githubusercontent.com/rakr/vim-one/master/colors/one.vim
+curl -LSso ~/.vim/colors/lucid.vim   https://raw.githubusercontent.com/cseelus/vim-colors-lucid/master/colors/lucid.vim
+curl -LSso ~/.vim/colors/one.vim     https://raw.githubusercontent.com/rakr/vim-one/master/colors/one.vim
+curl -LSso ~/.vim/colors/gruvbox.vim https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+
+if [ ! -d ~/.vim/bundle/solarized ]; then
+	git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/solarized
+fi
 
 # Copy .vimrc if it not exists.
 if [ ! -f ~/.vimrc ] || [ "$DOT_FORCE" -eq "1" ]; then

@@ -47,6 +47,12 @@ if [ ! -d ~/.vim/bundle/vim-multiple-cursors ]; then
 	git clone https://github.com/terryma/vim-multiple-cursors ~/.vim/bundle/vim-multiple-cursors
 fi
 
+# Install vim-abolish
+# See https://github.com/tpope/vim-abolish
+if [ ! -d ~/.vim/bundle/vim-abolish ]; then
+	git clone https://github.com/tpope/vim-abolish ~/.vim/bundle/vim-abolish
+fi
+
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
 if has yum; then

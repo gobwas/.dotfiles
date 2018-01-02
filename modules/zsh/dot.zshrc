@@ -14,4 +14,4 @@ fi
 
 # Customize to your needs...
 
-source ~/.dotfiles/init.zsh
+source $HOME/.dotfiles/init.sh

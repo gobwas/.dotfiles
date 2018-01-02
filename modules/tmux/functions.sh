@@ -1,4 +1,4 @@
-source $(dirname "$0")/../../utils/func.sh;
+source "$HOME/.dotfiles/utils/func.sh";
 
 ide() {
 	wd=$PWD

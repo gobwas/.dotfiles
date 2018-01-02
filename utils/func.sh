@@ -1,3 +1,25 @@
+init_modules() {
+	source_files $1 "init,exports,aliases,functions,extra"
+}
+
+install_modules() {
+	source_files $1 "install"
+}
+
+source_files() {
+	local module file filepath
+	
+	for module in $(echo $1 | tr "," " "); do
+		for file in $(echo $2 | tr "," " "); do
+			filepath="$HOME/.dotfiles/modules/$module/$file.sh"
+			if [ -f "$filepath" ]; then
+				echo "sourcing $filepath";
+				source $filepath;
+			fi
+		done;
+	done
+}
+
 # has checks whether this term has command or not.
 has() {
 	if which $1 1>/dev/null 2>&1; then

@@ -1,7 +1,7 @@
-source "$(dirname $0)/../../utils/func.sh"
+source "$HOME/.dotfiles/utils/func.sh"
 
 # Install fresh vim;
-if has brew; then
+if has brew && ! has vim; then
 	brew install vim --with-lua;
 fi
 
@@ -55,11 +55,14 @@ fi
 
 # Install tagbar
 # See https://github.com/majutsushi/tagbar
-if has yum; then
-	yum install ctags-etags;
-elif has brew; then
-	brew install ctags;
+if ! has ctags; then
+	if has yum; then
+		yum install ctags-etags;
+	elif has brew; then
+		brew install ctags;
+	fi
 fi
+
 if [ ! -d ~/.vim/bundle/tagbar ]; then
 	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 fi
@@ -68,15 +71,16 @@ fi
 # See http://vimcolors.com
 # See https://github.com/rakr/vim-one
 # See https://github.com/cseelus/vim-colors-lucid
-curl -LSso ~/.vim/colors/lucid.vim   https://raw.githubusercontent.com/cseelus/vim-colors-lucid/master/colors/lucid.vim
-curl -LSso ~/.vim/colors/one.vim     https://raw.githubusercontent.com/rakr/vim-one/master/colors/one.vim
-curl -LSso ~/.vim/colors/gruvbox.vim https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+curl -LSso ~/.vim/colors/lucid.vim    https://raw.githubusercontent.com/cseelus/vim-colors-lucid/master/colors/lucid.vim
+curl -LSso ~/.vim/colors/one.vim      https://raw.githubusercontent.com/rakr/vim-one/master/colors/one.vim
+curl -LSso ~/.vim/colors/gruvbox.vim  https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+curl -LSso ~/.vim/colors/material.vim https://raw.githubusercontent.com/hzchirs/vim-material/master/colors/vim-material.vim 
 
 if [ ! -d ~/.vim/bundle/solarized ]; then
 	git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/solarized
 fi
 
 # Copy .vimrc if it not exists.
-if [ ! -f ~/.vimrc ] || [ "$DOT_FORCE" -eq "1" ]; then
+if [[ ! -f ~/.vimrc ]] || [[ "$DOT_FORCE" -eq "1" ]]; then
 	cp "$(dirname $0)/vim.rc" "$HOME/.vimrc"
 fi

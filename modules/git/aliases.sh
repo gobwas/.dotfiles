@@ -3,7 +3,7 @@
 # (sorted alphabetically)
 #
 
-[[ "$(type -a gws | grep "alias")" != "" ]] && unalias gws
+[[ ! -z "$(type -a gws | grep "alias")" ]] && unalias gws
 
 alias g='git'
 alias ga='git add'

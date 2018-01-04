@@ -6,6 +6,6 @@ if has brew && ! has tmux; then
 fi
 
 # Copy .tmux.conf if it not exists.
-if [[ ! -f ~/.tmux.conf ]] || [[ "$DOT_FORCE" -eq "1" ]]; then
-	cp "$(dirname $0)/tmux.conf" "$HOME/.tmux.conf"
+if [[ ! -f $HOME/.tmux.conf ]] || [[ "$DOT_FORCE" -eq "1" ]]; then
+	cp "$HOME/.dotfiles/modules/tmux/dot.tmux.conf" "$HOME/.tmux.conf"
 fi

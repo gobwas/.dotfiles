@@ -82,5 +82,5 @@ fi
 
 # Copy .vimrc if it not exists.
 if [[ ! -f ~/.vimrc ]] || [[ "$DOT_FORCE" -eq "1" ]]; then
-	cp "$(dirname $0)/vim.rc" "$HOME/.vimrc"
+	cp "$HOME/.dotfiles/modules/vim/dot.vimrc" "$HOME/.vimrc"
 fi

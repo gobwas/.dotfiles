@@ -2,7 +2,7 @@ source "$HOME/.dotfiles/utils/func.sh";
 
 ide() {
 	wd=$PWD
-	if [[ "$1" ]]; then
+	if [[ ! -z "$1" ]]; then
 		wd=$(project $1);
 		if [ -z $wd ]; then
 			echo "Could not find project $1"

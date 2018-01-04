@@ -3,7 +3,9 @@
 # (sorted alphabetically)
 #
 
-[[ ! -z "$(type -a gws | grep "alias")" ]] && unalias gws
+if [ $(which gws &>/dev/null) ]; then
+    [[ ! -z "$(type -a gws | grep "alias")" ]] && unalias gws
+fi
 
 alias g='git'
 alias ga='git add'

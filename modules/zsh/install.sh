@@ -25,7 +25,7 @@ fi
 # Copy dotfiles for zsh.
 if [ ! -f $HOME/.zshrc ]; then
 	echo "copying .zshrc..."
-	cp dot.zshrc $HOME/.zshrc
+	cp $HOME/.dotfiles/modules/zsh/dot.zshrc $HOME/.zshrc
 fi
 
 # Install prezto.
@@ -41,5 +41,5 @@ fi
 # Copy dotfiles for prezto.
 if [ ! -f $HOME/.zpreztorc ]; then
 	echo "copying .zpreztorc..."
-	cp dot.zpreztorc $HOME/.zpreztorc
+	cp $HOME/.dotfiles/modules/zsh/dot.zpreztorc $HOME/.zpreztorc
 fi

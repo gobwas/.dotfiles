@@ -90,6 +90,18 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 nmap <F8> :TagbarToggle<CR>
 
+" Syntastic configuration.
+" ========================
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height=3
+let g:syntastic_go_checkers = ['gotype', 'golint', 'go vet']
+"hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
 

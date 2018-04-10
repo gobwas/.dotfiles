@@ -4,10 +4,10 @@ source "$HOME/.dotfiles/variables.sh"
 source "$HOME/.dotfiles/utils/func.sh"
 
 # Install fresh tmux;
-if has brew && [[ ! -d /usr/local/Cellar/coreutils ]]; then
-	echo "installing coreutils..."
-	# Install gnu tools like gsort, gawk etc.
-	brew install coreutils
+if has brew; then
+	# Install gnu tools like gsort, gawk, find etc.
+	brew install bash coreutils findutils gnu-getopt
+	brew link gnu-getopt --force
 fi
 
 # Now run install scripts from modules.

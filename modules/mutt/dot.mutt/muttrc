@@ -1,0 +1,33 @@
+# See:
+# http://www.mutt.org/doc/manual/
+# http://www.ucolick.org/~lharden/learnmutt.html
+# http://svn.df7cb.de/dotfiles/cb/.mutt/
+
+source ~/.mutt/colors
+source ~/.mutt/format
+
+set realname = "Sergey Kamardin"
+set from = "gobwas@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://gobwas@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = "<PASSWORD>"
+set imap_user = "gobwas@gmail.com"
+set imap_pass = "<PASSWORD>"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+#set sort=reverse-threads
+set sort=threads sort_aux=last-date
+
+set smtp_authenticators = 'gssapi:login'
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+alternative_order text/plain text/html
+
+
+# set editor = "vim"
+# set charset = "utf-8"
+# set record = ''

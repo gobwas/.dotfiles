@@ -86,6 +86,10 @@ let g:go_highlight_operators = 0
 let g:go_autodetect_gopath = 1
 
 let g:go_fmt_command = "goimports"
+let g:go_fmt_options = {
+    \ 'gofmt': '-s',
+    \ 'goimports': '-local github.my-company-name.ru',
+    \ }
 
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -102,7 +106,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_loc_list_height=3
-let g:syntastic_go_checkers = ['gotype', 'golint', 'go vet']
+let g:syntastic_go_checkers = ['gotype', 'golint']
 "hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
 

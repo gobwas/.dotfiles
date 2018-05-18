@@ -2,32 +2,40 @@
 # http://www.mutt.org/doc/manual/
 # http://www.ucolick.org/~lharden/learnmutt.html
 # http://svn.df7cb.de/dotfiles/cb/.mutt/
+# https://gist.github.com/miguelmota/9456162
 
 source ~/.mutt/colors
 source ~/.mutt/format
+source ~/.mutt/sidebar
 
-set realname = "Sergey Kamardin"
-set from = "gobwas@gmail.com"
-set use_from = yes
-set envelope_from = yes
+# Default account.
+#source ~/.mutt/gobwas@gmail.com/muttrc
+source ~/.mutt/kamardin@yandex-team.ru/muttrc
 
-set smtp_url = "smtps://gobwas@gmail.com@smtp.gmail.com:465/"
-set smtp_pass = "<PASSWORD>"
-set imap_user = "gobwas@gmail.com"
-set imap_pass = "<PASSWORD>"
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set ssl_force_tls = yes
+macro index <f2> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@gmail.com/muttrc<enter><change-folder>!<enter>"
+macro index <f3> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@yandex.ru/muttrc<enter><change-folder>!<enter>"
+macro index <f4> "<sync-mailbox><enter-command>source ~/.mutt/kamardin@yandex-team.ru/muttrc<enter><change-folder>!<enter>"
 
-#set sort=reverse-threads
-set sort=threads sort_aux=last-date
 
-set smtp_authenticators = 'gssapi:login'
+#set alias_file    = ~/.mutt/aliases
+#set sort_alias    = alias
+#set reverse_alias = yes
+#source $alias_file
+
+set sort=reverse-threads sort_aux=last-date
+
 set mailcap_path = ~/.mutt/mailcap
 auto_view text/html
 alternative_order text/plain text/html
 
+set mail_check_stats = yes
+
+#set imap_check_subscribed
+#unset imap_passive
+#set imap_keepalive = 900
+#set mail_check     = 1800
 
 # set editor = "vim"
 # set charset = "utf-8"
-# set record = ''
+# set record = ""
+

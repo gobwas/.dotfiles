@@ -1,0 +1,16 @@
+bind index,pager <esc><right> sidebar-toggle-visible
+bind index,pager <esc><left>  sidebar-toggle-visible
+bind index,pager <esc><up>    sidebar-prev
+bind index,pager <esc><down>  sidebar-next
+bind index,pager <esc>o       sidebar-open
+
+set sidebar_visible = yes
+
+# See
+# http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
+
+color sidebar_highlight color245 color235
+color sidebar_new color33 color234
+color sidebar_indicator color247 color234
+
+set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"

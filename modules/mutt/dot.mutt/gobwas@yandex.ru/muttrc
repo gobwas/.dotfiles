@@ -1,0 +1,24 @@
+set header_cache     = ~/.mutt/gobwas@yandex.ru/cache/headers
+set message_cachedir = ~/.mutt/gobwas@yandex.ru/cache/bodies
+
+set realname      = "Сергей Камардин"
+set from          = "gobwas@yandex.ru"
+set use_from      = yes
+set envelope_from = yes
+
+set folder    = "imaps://imap.yandex.ru:993"
+set spoolfile = "+INBOX"
+set postponed = "+Черновики"
+set record    = "+Отправленные"
+
+set ssl_starttls  = yes
+set ssl_force_tls = yes
+unset smtp_authenticators
+
+set smtp_url  = "smtps://gobwas@yandex.ru@smtp.yandex.ru:465/"
+set smtp_pass = "PASSWORD"
+set imap_user = "gobwas@yandex.ru"
+set imap_pass = "PASSWORD"
+
+unmailboxes *
+mailboxes "+INBOX"

@@ -1,0 +1,30 @@
+set header_cache     = ~/.mutt/gobwas@gmail.com/cache/headers
+set message_cachedir = ~/.mutt/gobwas@gmail.com/cache/bodies
+
+set realname      = "Sergey Kamardin"
+set from          = "gobwas@gmail.com"
+set use_from      = yes
+set envelope_from = yes
+
+set folder    = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Черновики"
+set record    = "+[Gmail]/Отправленные"
+
+set ssl_starttls  = yes
+set ssl_force_tls = yes
+set smtp_authenticators = "gssapi:login"
+
+set smtp_url  = "smtps://gobwas@gmail.com@smtp.gmail.com:465/"
+set smtp_pass = "PASSWORD"
+set imap_user = "gobwas@gmail.com"
+set imap_pass = "PASSWORD"
+
+unmailboxes *
+mailboxes "+INBOX"
+mailboxes "+[Gmail]/Черновики"
+mailboxes "+[Gmail]/Отправленные"
+mailboxes "+Путешествие"
+mailboxes "+Github"
+mailboxes "+CI"
+

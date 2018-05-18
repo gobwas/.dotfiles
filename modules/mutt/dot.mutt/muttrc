@@ -9,8 +9,7 @@ source ~/.mutt/format
 source ~/.mutt/sidebar
 
 # Default account.
-#source ~/.mutt/gobwas@gmail.com/muttrc
-source ~/.mutt/kamardin@yandex-team.ru/muttrc
+source ~/.mutt/gobwas@gmail.com/muttrc
 
 macro index <f2> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@gmail.com/muttrc<enter><change-folder>!<enter>"
 macro index <f3> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@yandex.ru/muttrc<enter><change-folder>!<enter>"

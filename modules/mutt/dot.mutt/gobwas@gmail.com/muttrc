@@ -9,7 +9,7 @@ set envelope_from = yes
 set folder    = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set postponed = "+[Gmail]/Черновики"
-set record    = "+[Gmail]/Отправленные"
+unset record
 
 set ssl_starttls  = yes
 set ssl_force_tls = yes
@@ -22,9 +22,4 @@ set imap_pass = "PASSWORD"
 
 unmailboxes *
 mailboxes "+INBOX"
-mailboxes "+[Gmail]/Черновики"
-mailboxes "+[Gmail]/Отправленные"
-mailboxes "+Путешествие"
-mailboxes "+Github"
-mailboxes "+CI"
 

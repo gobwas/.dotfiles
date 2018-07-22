@@ -15,13 +15,14 @@ macro index <f2> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@gmail.com/m
 macro index <f3> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@yandex.ru/muttrc<enter><change-folder>!<enter>"
 macro index <f4> "<sync-mailbox><enter-command>source ~/.mutt/kamardin@yandex-team.ru/muttrc<enter><change-folder>!<enter>"
 
+bind index G imap-fetch-mail
 
 #set alias_file    = ~/.mutt/aliases
 #set sort_alias    = alias
 #set reverse_alias = yes
 #source $alias_file
 
-set sort=reverse-threads sort_aux=last-date
+set sort=threads sort_aux=last-date
 
 set mailcap_path = ~/.mutt/mailcap
 auto_view text/html

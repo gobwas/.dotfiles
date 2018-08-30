@@ -15,12 +15,14 @@ macro index <f2> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@gmail.com/m
 macro index <f3> "<sync-mailbox><enter-command>source ~/.mutt/gobwas@yandex.ru/muttrc<enter><change-folder>!<enter>"
 macro index <f4> "<sync-mailbox><enter-command>source ~/.mutt/kamardin@yandex-team.ru/muttrc<enter><change-folder>!<enter>"
 
-bind index G imap-fetch-mail
-
-#set alias_file    = ~/.mutt/aliases
-#set sort_alias    = alias
-#set reverse_alias = yes
-#source $alias_file
+# See http://www.mutt.org/doc/manual/#functions
+# See http://www.mutt.org/doc/manual/#bind
+bind index                   G imap-fetch-mail
+bind generic,index,pager   \Cd half-down
+bind generic,index,pager   \Cu half-up
+bind index                   o display-message
+bind index                   D delete-thread
+bind pager               <Esc> exit
 
 set sort=threads sort_aux=last-date
 
@@ -29,13 +31,3 @@ auto_view text/html
 alternative_order text/plain text/html
 
 set mail_check_stats = yes
-
-#set imap_check_subscribed
-#unset imap_passive
-#set imap_keepalive = 900
-#set mail_check     = 1800
-
-# set editor = "vim"
-# set charset = "utf-8"
-# set record = ""
-

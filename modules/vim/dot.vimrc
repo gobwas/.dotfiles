@@ -19,23 +19,6 @@ filetype plugin indent on
 
 
 
-" These things I used to use sometime.
-" ------------------------------------
-"set lazyredraw
-"set cul
-"set relativenumber
-"set cursorline
-
-"set colorcolumn=110
-"highlight ColorColumn ctermbg=darkgray
-
-"set nocursorcolumn
-"set nocursorline
-"set norelativenumber
-
-
-
-
 " Directories configuration for swap, backup and undo.
 " ====================================================
 
@@ -52,16 +35,24 @@ set undofile
 set undodir=~/.vim/_undo/
 
 
-
-
 " Plugins initialization.
 " =======================
 
 " Run pathogen.
 execute pathogen#infect()
 
+" Basic display options.
+" ======================
 set background=light
 colorscheme one
+
+" Fuzzy finder integration.
+" =========================
+set rtp+=~/.fzf
+" FZF {{{
+" <C-p> to search files
+nnoremap <silent> <C-p> :FZF -m<cr>
+" }}}
 
 
 " Golang configuration.

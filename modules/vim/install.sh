@@ -67,6 +67,15 @@ if [ ! -d ~/.vim/bundle/tagbar ]; then
 	git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 fi
 
+# Instal fuzzy finder.
+if [ ! -d ~/.fzf ]; then
+	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+	~/.fzf/install
+fi
+if [ ! -d ~/.vim/bundle/fzf ]; then
+	git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf
+fi
+
 # Install color themes.
 # See http://vimcolors.com
 # See https://github.com/rakr/vim-one

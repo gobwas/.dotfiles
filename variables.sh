@@ -1,3 +1,3 @@
 modules() {
-	echo "zsh,go,git,brew,python,vim,tmux"
+	echo "zsh,go,ag,git,brew,python,fzf,vim,tmux"
 }

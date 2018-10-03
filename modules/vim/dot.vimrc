@@ -51,7 +51,8 @@ colorscheme one
 set rtp+=~/.fzf
 " FZF {{{
 " <C-p> to search files
-nnoremap <silent> <C-p> :FZF -m<cr>
+nmap <silent> <C-p> :FZF -m<cr>
+nmap <silent> ; :Buffers<cr>
 " }}}
 
 

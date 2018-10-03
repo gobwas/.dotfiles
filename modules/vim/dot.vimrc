@@ -55,6 +55,13 @@ nmap <silent> <C-p> :FZF -m<cr>
 nmap <silent> ; :Buffers<cr>
 " }}}
 
+" Ack.vim configuration to use ag (the-silver-searcher).
+" ======================================================
+" Ack {{{
+if executable('ag')
+	let g:ackprg = 'ag --vimgrep'
+endif
+" }}}
 
 " Golang configuration.
 " =====================

@@ -59,7 +59,7 @@ set rtp+=~/.fzf
 " FZF {{{
 " <C-p> to search files
 nmap <silent> <C-p> :FZF -m<cr>
-nmap <silent> ; :Buffers<cr>
+"nmap <silent> ; :Buffers<cr>
 " }}}
 
 " Ack.vim configuration to use ag (the-silver-searcher).
@@ -106,7 +106,7 @@ nmap <F8> :TagbarToggle<CR>
 " ==================
 " ALE {{{
 let g:ale_linters = {
-	\   'go': ['golint', 'gotype'],
+	\   'go': ['golint', 'gotype', 'staticcheck'],
 	\}
 " }}}
 

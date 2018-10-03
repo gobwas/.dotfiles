@@ -46,6 +46,13 @@ execute pathogen#infect()
 set background=light
 colorscheme one
 
+" Basic key bindings.
+" ===================
+" MAP {{{
+" Fast closure of quickfix window.
+nmap <leader>x :cclose<cr>
+" }}}
+
 " Fuzzy finder integration.
 " =========================
 set rtp+=~/.fzf
@@ -65,6 +72,7 @@ endif
 
 " Golang configuration.
 " =====================
+" Golang {{{
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_chan_whitespace_error = 0
 let g:go_highlight_extra_types = 0
@@ -83,29 +91,22 @@ let g:go_highlight_structs = 0
 let g:go_highlight_interfaces = 0
 let g:go_highlight_operators = 0
 let g:go_autodetect_gopath = 1
-
 let g:go_fmt_command = "goimports"
 let g:go_fmt_options = {
     \ 'gofmt': '-s',
     \ 'goimports': '-local github.my-company-name.ru',
     \ }
+" }}}
 
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 nmap <F8> :TagbarToggle<CR>
 
-" Syntastic configuration.
-" ========================
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height=3
-let g:syntastic_go_checkers = ['gotype', 'golint']
-"hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
-
+" ALE configuration.
+" ==================
+" ALE {{{
+let g:ale_linters = {
+	\   'go': ['golint', 'gotype'],
+	\}
+" }}}
 

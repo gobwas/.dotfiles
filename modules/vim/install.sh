@@ -30,11 +30,6 @@ if [ ! -d ~/.vim/bundle/nerdtree ]; then
 	git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 fi
 
-# Install syntastic
-if [ ! -d ~/.vim/bundle/syntastic ]; then
-	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
-fi
-
 # Install vim-gitgutter
 # See github.com/airblade/vim-gitgutter
 if [ ! -d ~/.vim/bundle/vim-gitgutter ]; then
@@ -75,6 +70,11 @@ fi
 # Install Ack searcher.
 if [ ! -d ~/.vim/bundle/ack ]; then
 	git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack
+fi
+
+# Install ALE (Asynchronous Lint Engine).
+if [ ! -d ~/.vim/bundle/ale ]; then
+	git clone https://github.com/w0rp/ale.git ~/.vim/bundle/ale
 fi
 
 # Install color themes.

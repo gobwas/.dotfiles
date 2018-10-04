@@ -34,6 +34,9 @@ set backupdir=~/.vim/_backup/,~/tmp,.
 set undofile
 set undodir=~/.vim/_undo/
 
+" always show status line
+set laststatus=2
+
 
 " Plugins initialization.
 " =======================

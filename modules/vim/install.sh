@@ -1,8 +1,10 @@
 source "$HOME/.dotfiles/utils/func.sh"
 
 # Install fresh vim;
-if has brew && ! has vim; then
+# Install it unconditionally on mac to get rich set of options enabled.
+if has brew; then
 	brew install vim --with-lua;
+	ln -s /usr/local/bin/vim /usr/local/bin/vi
 fi
 
 # Create vim directories.

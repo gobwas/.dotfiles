@@ -6,7 +6,7 @@
 
 source ~/.mutt/colors
 source ~/.mutt/format
-source ~/.mutt/sidebar
+#source ~/.mutt/sidebar
 
 # Default account.
 source ~/.mutt/gobwas@gmail.com/muttrc

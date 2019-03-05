@@ -10,6 +10,8 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 set wildmenu
 set hlsearch
 set incsearch
+" Do not jump on the next match during star search.
+nnoremap * *``
 
 set exrc
 set secure

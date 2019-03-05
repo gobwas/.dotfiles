@@ -1,6 +1,9 @@
 source "$HOME/.dotfiles/utils/func.sh"
 
-# Install shell language translator.
 if has brew ; then
+	# Install shell language translator.
 	brew install translate-shell;
+	# Install rg tool.
+	brew install ripgrep;
 fi
+

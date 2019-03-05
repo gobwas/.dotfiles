@@ -22,9 +22,9 @@ set imap_pass = "PASSWORD"
 
 macro index gi "<change-folder>=INBOX<enter>"
 macro index gs "<change-folder>=[Gmail]/Отправленные<enter>"
-macro index gg "<change-folder>=[Gmail]/Github<enter>"
-macro index gf "<change-folder>=Форумы<enter>"
-macro index gn "<change-folder>=Форумы/go-nuts<enter>"
+macro index gh "<change-folder>=[Gmail]/Github<enter>"
+macro index gg "<change-folder>=Lists/Go<enter>"
+macro index gv "<change-folder>=Lists/Vim<enter>"
 
 unmailboxes *
 mailboxes "+INBOX"

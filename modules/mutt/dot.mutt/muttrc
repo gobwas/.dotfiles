@@ -22,6 +22,7 @@ bind generic,index,pager   \Cd half-down
 bind generic,index,pager   \Cu half-up
 bind index                   o display-message
 bind index                   D delete-thread
+bind index                 \CD delete-pattern
 bind pager               <Esc> exit
 
 set sort=threads sort_aux=last-date

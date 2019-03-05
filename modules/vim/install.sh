@@ -69,11 +69,6 @@ if [ ! -d ~/.vim/bundle/fzf ]; then
 	git clone https://github.com/junegunn/fzf.vim ~/.vim/bundle/fzf
 fi
 
-# Install Ack searcher.
-if [ ! -d ~/.vim/bundle/ack ]; then
-	git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack
-fi
-
 # Install ALE (Asynchronous Lint Engine).
 if [ ! -d ~/.vim/bundle/ale ]; then
 	git clone https://github.com/w0rp/ale.git ~/.vim/bundle/ale
